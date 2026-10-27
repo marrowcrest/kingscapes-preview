@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Pitch preview, not the client's live site: keep it out of search results -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>King Scapes | Saint Paul &amp; Twin Cities Landscape Design-Build Since 2007</title>
+  <meta name="description" content="Paver patios, retaining walls, fireplaces, driveways and water features across Saint Paul and the Twin Cities. Owner-operated since 2007, ICPI member. Free consultation: (651) 210-0648.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4E7D23',
+            secondary: '#262522',
+            accent: '#D4A82A',
+            'accent-deep': '#8A6A0E',
+            brand: {
+              text: '#22241F',
+              bg: '#FAFAF6',
+            },
+            dark: '#0a0a0a',
+          },
+          fontFamily: {
+            heading: ['Oswald', 'sans-serif'],
+            body: ['"Source Sans 3"', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <!-- LocalBusiness JSON-LD removed for the pitch preview so it can't compete with kingscapes.net.
+       Restore it from ../_index.html.bak when this goes live on the client's own domain. -->
+  <style>
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    .hero-bg {
+      background: linear-gradient(135deg, #262522, #4E7D23, #262522);
+      background-size: 300% 300%;
+      animation: gradientShift 12s ease infinite;
+    }
+
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .nav.scrolled { box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+
+    picture { display: contents; }
+    picture > img { width: auto; height: auto; }
+
+    .cs { position: relative; overflow: hidden; }
+    .cs-after {
+      position: absolute; inset: 0;
+      clip-path: inset(0 50% 0 0);
+      transition: clip-path 0.05s linear;
+    }
+    .cs input[type=range] {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      opacity: 0; cursor: ew-resize; z-index: 10;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-bg { animation: none !important; }
+      .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+      .group:hover .group-hover\:scale-105 { transform: none !important; }
+      html { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body class="bg-brand-bg text-brand-text font-body antialiased">
+
+<nav class="nav fixed top-0 w-full z-50 bg-brand-bg/95 backdrop-blur border-b border-brand-text/10 transition-shadow duration-300" id="nav">
+  <div class="bg-brand-text text-white/85 text-center font-body text-[11px] sm:text-xs leading-6 sm:leading-6 px-4">Design concept for King Scapes &middot; not their official website<span class="hidden sm:inline"> &middot; visit <a href="https://www.kingscapes.net" class="underline underline-offset-2 hover:text-white" rel="noopener">kingscapes.net</a></span></div>
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16 md:h-20">
+    <a href="#hero" class="flex items-center shrink-0 min-h-[44px]" aria-label="King Scapes — back to top">
+      <picture><source type="image/webp" srcset="assets/king-scapes-logo.webp"><img src="assets/king-scapes-logo.png" alt="King Scapes Landscape Construction" width="276" height="88" class="h-9 md:h-11 w-auto"></picture>
+    </a>
+    <ul class="hidden lg:flex items-center gap-8 font-body text-[15px] font-semibold text-brand-text">
+      <li><a href="#services" class="hover:text-primary transition-colors">Services</a></li>
+      <li><a href="#builders" class="hover:text-primary transition-colors">The Builders</a></li>
+      <li><a href="#gallery" class="hover:text-primary transition-colors">Our Work</a></li>
+      <li><a href="#testimonials" class="hover:text-primary transition-colors">Reviews</a></li>
+      <li><a href="tel:+16512100648" class="font-heading tracking-wide text-base hover:text-primary transition-colors">(651) 210-0648</a></li>
+      <li><a href="#contact" class="inline-block bg-primary text-white px-5 py-3 font-heading font-semibold uppercase tracking-widest text-xs rounded-none hover:bg-secondary transition-colors">Free Consultation</a></li>
+    </ul>
+    <button class="nav__toggle lg:hidden w-11 h-11 -mr-2 flex items-center justify-center text-brand-text" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="nav__menu hidden flex-col bg-brand-bg border-t border-brand-text/10 px-4 sm:px-6 pb-6 font-body text-base font-semibold text-brand-text lg:hidden">
+    <a href="#services" class="py-3 border-b border-brand-text/10">Services</a>
+    <a href="#builders" class="py-3 border-b border-brand-text/10">The Builders</a>
+    <a href="#gallery" class="py-3 border-b border-brand-text/10">Our Work</a>
+    <a href="#testimonials" class="py-3 border-b border-brand-text/10">Reviews</a>
+    <a href="tel:+16512100648" class="py-3 border-b border-brand-text/10 font-heading tracking-wide">Call (651) 210-0648</a>
+    <a href="#contact" class="mt-4 block bg-primary text-white px-5 py-4 font-heading font-semibold uppercase tracking-widest text-sm rounded-none text-center">Get a Free Consultation</a>
+  </div>
+</nav>
+
+<main>
+  <section id="hero" class="hero-bg relative min-h-[100svh] flex items-end md:items-center pt-24 md:pt-28 pb-12 md:pb-20">
+    <div class="absolute inset-0 overflow-hidden">
+      <picture><source type="image/avif" srcset="assets/work-herringbone-driveway.avif"><source type="image/webp" srcset="assets/work-herringbone-driveway.webp"><img src="assets/work-herringbone-driveway.jpg" alt="Herringbone paver driveway with a contrasting soldier border, running between stepped block retaining walls to a garage" width="1600" height="1600" class="absolute inset-0 !w-full !h-full object-cover object-[50%_18%]" fetchpriority="high" decoding="async"></picture>
+      <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/85 to-secondary/40 md:bg-gradient-to-r md:from-secondary md:via-secondary/80 md:to-secondary/20"></div>
+    </div>
+
+    <div class="relative w-full max-w-screen-xl mx-auto px-4 sm:px-6">
+      <div class="max-w-3xl">
+        <div class="reveal flex items-center gap-3 mb-5">
+          <span class="h-[2px] w-10 bg-accent"></span>
+          <span class="font-body text-xs sm:text-sm uppercase tracking-[0.22em] text-accent font-semibold">Let's Create Your Kingdom</span>
+        </div>
+        <h1 class="reveal font-heading font-bold uppercase tracking-wide text-white leading-[1.05] text-[2rem] sm:text-5xl lg:text-[4.25rem] [overflow-wrap:break-word] mb-5">Turn the Slope You Can't Use Into the Backyard You Won't Leave.</h1>
+        <p class="reveal font-body text-base sm:text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-6">Patios, retaining walls and fireplaces across Saint Paul and the Twin Cities, designed and built by the same owner-operated crew since 2007.</p>
+
+        <ul class="reveal flex flex-wrap gap-x-6 gap-y-2 mb-8 font-body text-sm sm:text-base text-white/90">
+          <li class="flex items-center gap-2"><svg class="w-5 h-5 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" aria-hidden="true"><path d="M5 12l5 5L19 7"/></svg>Since 2007</li>
+          <li class="flex items-center gap-2"><svg class="w-5 h-5 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" aria-hidden="true"><path d="M5 12l5 5L19 7"/></svg>ICPI Member</li>
+          <li class="flex items-center gap-2"><svg class="w-5 h-5 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" aria-hidden="true"><path d="M5 12l5 5L19 7"/></svg>Licensed &amp; Insured</li>
+        </ul>
+
+        <div class="reveal flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <a href="#contact" class="inline-block text-center bg-primary text-white px-8 py-4 font-heading font-semibold uppercase tracking-widest text-sm rounded-none hover:bg-white hover:text-secondary transition-colors">Get a Free Consultation</a>
+          <a href="#gallery" class="inline-block text-center border-2 border-white text-white px-8 py-[14px] font-heading font-semibold uppercase tracking-widest text-sm rounded-none hover:bg-white hover:text-secondary transition-colors">See Our Work &rarr;</a>
+        </div>
+        <p class="reveal mt-5 font-body text-sm text-white/60">Or call Donovan directly: <a href="tel:+16512100648" class="inline-block py-2.5 font-heading text-base tracking-wide text-white hover:text-accent transition-colors">(651) 210-0648</a></p>
+      </div>
+    </div>
+
+    <p class="hidden lg:block absolute bottom-6 right-6 font-body text-xs text-white/50">Herringbone paver driveway &amp; stepped walls, a King Scapes build</p>
+  </section>
+
+  <div class="bg-brand-bg border-b border-brand-text/10">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 py-6 md:py-7 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
+      <ul class="flex flex-wrap items-center gap-x-3 gap-y-2 font-heading font-medium uppercase tracking-wider text-sm md:text-base text-brand-text">
+        <li>Since 2007</li>
+        <li class="text-accent" aria-hidden="true">/</li>
+        <li>ICPI Member</li>
+        <li class="text-accent" aria-hidden="true">/</li>
+        <li>MNLA Certified Designer</li>
+        <li class="text-accent" aria-hidden="true">/</li>
+        <li>4.7<span aria-hidden="true">&#9733;</span><span class="sr-only"> stars</span> on HomeAdvisor</li>
+        <li class="text-accent" aria-hidden="true">/</li>
+        <li>Licensed &amp; Insured</li>
+      </ul>
+      <div class="flex items-center gap-6 shrink-0">
+        <picture><source type="image/webp" srcset="assets/mark-icpi.webp"><img src="assets/mark-icpi.png" alt="ICPI — Interlocking Concrete Pavement Institute member" width="156" height="72" loading="lazy" decoding="async" class="h-9 w-auto"></picture>
+        <picture><source type="image/avif" srcset="assets/mark-angies-list-2019.avif"><source type="image/webp" srcset="assets/mark-angies-list-2019.webp"><img src="assets/mark-angies-list-2019.png" alt="Angie's List 2019 Super Service Award" width="108" height="90" loading="lazy" decoding="async" class="h-11 w-auto"></picture>
+        <picture><source type="image/webp" srcset="assets/mark-homeadvisor-approved.webp"><img src="assets/mark-homeadvisor-approved.png" alt="HomeAdvisor Screened &amp; Approved" width="98" height="90" loading="lazy" decoding="async" class="h-11 w-auto"></picture>
+      </div>
+    </div>
+  </div>
+  <section id="services" class="bg-brand-bg py-20 md:py-28 scroll-mt-16 md:scroll-mt-20">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6">
+      <div class="reveal h-[3px] w-14 bg-accent mb-6"></div>
+      <p class="reveal font-body text-xs uppercase tracking-[0.22em] text-accent-deep font-semibold mb-3">What we build</p>
+      <h2 class="reveal font-heading font-bold uppercase tracking-wide text-[1.9rem] sm:text-4xl md:text-5xl text-brand-text leading-tight mb-4 [overflow-wrap:break-word]">Built in Stone. Designed Around You.</h2>
+      <p class="reveal font-body text-lg text-brand-text/70 mb-12 max-w-2xl leading-relaxed">Five things we do more than anything else, all designed, built and guaranteed by one owner-operated company.</p>
+
+      <ol class="reveal grid grid-cols-1 md:grid-cols-3 border border-brand-text/15 bg-white mb-12">
+        <li class="p-6 md:p-7 border-b md:border-b-0 md:border-r border-brand-text/15">
+          <div class="font-heading font-bold text-3xl text-primary leading-none mb-3">01</div>
+          <div class="font-heading font-semibold uppercase tracking-wide text-lg text-brand-text mb-1">Free consultation</div>
+          <p class="font-body text-[15px] text-brand-text/70 leading-relaxed">We walk the yard with you, look at grade and drainage, and give you straight advice, at no charge.</p>
+        </li>
+        <li class="p-6 md:p-7 border-b md:border-b-0 md:border-r border-brand-text/15">
+          <div class="font-heading font-bold text-3xl text-primary leading-none mb-3">02</div>
+          <div class="font-heading font-semibold uppercase tracking-wide text-lg text-brand-text mb-1">Custom 2D &amp; 3D design</div>
+          <p class="font-body text-[15px] text-brand-text/70 leading-relaxed">You see the patio, wall or fireplace in a digital design before anything gets dug, and change it until it's right.</p>
+        </li>
+        <li class="p-6 md:p-7">
+          <div class="font-heading font-bold text-3xl text-primary leading-none mb-3">03</div>
+          <div class="font-heading font-semibold uppercase tracking-wide text-lg text-brand-text mb-1">Built by our own crew</div>
+          <p class="font-body text-[15px] text-brand-text/70 leading-relaxed">The people who designed it build it, with the same attention to detail from the base course to the last capstone.</p>
+        </li>
+      </ol>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="reveal group bg-white border border-brand-text/10 p-7 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_-12px_rgba(38,37,34,0.25)]">
+          <div class="w-14 h-14 bg-primary flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><path d="M3 21L7 5h10l4 16H3z"/><path d="M5 15h14M6 10h12"/><path d="M12 5v5M9.5 10l-.7 5M14.5 10l.7 5M12 15v6"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold uppercase tracking-wide text-xl text-brand-text mb-2">Patios &amp; Outdoor Rooms</h3>
+          <p class="font-body text-base text-brand-text/70 leading-relaxed">Paver or natural stone, with pergolas and arbors to finish the space. Patios are often the most used &ldquo;room&rdquo; in the house, so we design yours like one. Free patio designs and estimates.</p>
+        </article>
+        <article class="reveal group bg-white border border-brand-text/10 p-7 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_-12px_rgba(38,37,34,0.25)]">
+          <div class="w-14 h-14 bg-primary flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><path d="M3 21h18v-5H3z"/><path d="M7 16v-5h14v5"/><path d="M11 11V6h10v5"/><path d="M9 21v-5M15 21v-5M14 16v-5M16 11V6"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold uppercase tracking-wide text-xl text-brand-text mb-2">Retaining Walls &amp; Steps</h3>
+          <p class="font-body text-base text-brand-text/70 leading-relaxed">Turn an unusable slope into level, usable ground. We build retaining, freestanding and seating walls, pillars, steps and stairways, set on a proper base to stand up to Minnesota freeze-thaw.</p>
+        </article>
+        <article class="reveal group bg-white border border-brand-text/10 p-7 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_-12px_rgba(38,37,34,0.25)]">
+          <div class="w-14 h-14 bg-primary flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><path d="M3 21h18M5 21v-6h14v6"/><path d="M12 12.5c-2.2 0-3.5-1.5-3-3.6.4-1.6 1.7-2.4 1.8-4.9 1.6 1 2 2.4 2 3.3.6-.4 1-1 1.1-1.8 1 1 1.4 2.1 1.1 3.4-.3 2-1.5 3.6-3 3.6z"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold uppercase tracking-wide text-xl text-brand-text mb-2">Fireplaces &amp; Fire Pits</h3>
+          <p class="font-body text-base text-brand-text/70 leading-relaxed">From full outdoor fireplaces with mantels to simple fire pits, wood or gas, big or small. They stretch a short Minnesota season into October. You just bring the marshmallows.</p>
+        </article>
+        <article class="reveal group bg-white border border-brand-text/10 p-7 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_-12px_rgba(38,37,34,0.25)]">
+          <div class="w-14 h-14 bg-primary flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><path d="M9 3L4 21M15 3l5 18"/><path d="M12 6v2M12 11v3M12 17v4"/><path d="M8.2 8h7.6M6.6 14h10.8"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold uppercase tracking-wide text-xl text-brand-text mb-2">Paver Driveways</h3>
+          <p class="font-body text-base text-brand-text/70 leading-relaxed">A driveway is the first thing anyone sees. We lay paver driveways on a properly compacted base, in a classic look or a custom pattern: durable, attractive and made to last.</p>
+        </article>
+        <article class="reveal group bg-white border border-brand-text/10 p-7 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_-12px_rgba(38,37,34,0.25)]">
+          <div class="w-14 h-14 bg-primary flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><path d="M4 21c0-3.5 3.6-6 8-6s8 2.5 8 6"/><path d="M12 15V9c0-2.5-3-3.5-4.5-1.5M12 9c0-2.5 3-3.5 4.5-1.5"/><path d="M2 21h20"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold uppercase tracking-wide text-xl text-brand-text mb-2">Water Features</h3>
+          <p class="font-body text-base text-brand-text/70 leading-relaxed">From backyard bubbling boulders to front-entry fountains, and the ponds, streams and creek beds in between. No landscape is complete without the sound of water.</p>
+        </article>
+        <a href="#contact" class="reveal group bg-secondary p-7 md:p-8 flex flex-col justify-between transition-colors hover:bg-primary">
+          <div>
+            <div class="h-[3px] w-10 bg-accent mb-6"></div>
+            <h3 class="font-heading font-semibold uppercase tracking-wide text-xl text-white mb-2">Not Sure Where to Start?</h3>
+            <p class="font-body text-base text-white/70 leading-relaxed">Most projects are a combination: a wall that makes room for a patio, a patio that wants a fire pit. Tell us about the yard and we'll design it as a whole.</p>
+          </div>
+          <span class="mt-6 font-heading font-semibold uppercase tracking-widest text-sm text-white">Book a Free Site Visit &rarr;</span>
+        </a>
+      </div>
+
+      <p class="reveal mt-10 font-body text-[15px] text-brand-text/70"><span class="font-heading uppercase tracking-wider text-brand-text mr-2">Also:</span>Landscape lighting &middot; Plantings &middot; Drainage &amp; grading &middot; Walkways &middot; Pergolas &middot; Paver repair &amp; sealing &middot; Sod &amp; seed</p>
+    </div>
+  </section>
+
+  <section id="builders" class="bg-secondary pt-20 md:pt-28 pb-16 md:pb-20 scroll-mt-16 md:scroll-mt-20">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+        <div class="lg:col-span-5">
+          <div class="reveal h-[3px] w-14 bg-accent mb-6"></div>
+          <p class="reveal font-body text-xs uppercase tracking-[0.22em] text-accent font-semibold mb-3">The builders</p>
+          <h2 class="reveal font-heading font-bold uppercase tracking-wide text-[1.9rem] sm:text-4xl md:text-5xl text-white leading-tight mb-5 [overflow-wrap:break-word]">Know Who's in Your Yard.</h2>
+          <p class="reveal font-body text-lg text-white/70 leading-relaxed mb-6">King Scapes is owner-operated. The person who walks your yard and quotes the job is the person accountable for it, and that hasn't changed since 2007.</p>
+          <p class="reveal font-body text-base text-white/60 leading-relaxed">We're fully licensed and insured, and a member of the Interlocking Concrete Pavement Institute, the industry association for concrete pavers and segmental retaining walls.</p>
+        </div>
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <article class="reveal bg-white/[0.04] border border-white/10">
+            <div class="aspect-square overflow-hidden">
+              <picture><source type="image/avif" srcset="assets/team-donovan.avif"><source type="image/webp" srcset="assets/team-donovan.webp"><img src="assets/team-donovan.jpg" alt="Donovan, founder of King Scapes, in a company polo" width="668" height="668" loading="lazy" decoding="async" class="!w-full !h-full object-cover object-top"></picture>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-semibold uppercase tracking-wide text-2xl text-white">Donovan</h3>
+              <p class="font-body text-xs uppercase tracking-[0.18em] text-accent font-semibold mt-1 mb-3">Founder &middot; Since 2007</p>
+              <p class="font-body text-[15px] text-white/65 leading-relaxed">Agricultural college, then five years in the commercial landscape supply industry, before starting King Scapes in 2007.</p>
+            </div>
+          </article>
+          <article class="reveal bg-white/[0.04] border border-white/10">
+            <div class="aspect-square overflow-hidden">
+              <picture><source type="image/avif" srcset="assets/team-adam.avif"><source type="image/webp" srcset="assets/team-adam.webp"><img src="assets/team-adam.jpg" alt="Adam, King Scapes landscape designer, in a company polo and cap" width="668" height="668" loading="lazy" decoding="async" class="!w-full !h-full object-cover object-top"></picture>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading font-semibold uppercase tracking-wide text-2xl text-white">Adam</h3>
+              <p class="font-body text-xs uppercase tracking-[0.18em] text-accent font-semibold mt-1 mb-3">Designer &middot; MNLA Certified</p>
+              <p class="font-body text-[15px] text-white/65 leading-relaxed">MNLA Certified Professional with a B.S. in Horticulture from UW&ndash;River Falls, with an emphasis in landscape design.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="gallery" class="bg-secondary pb-20 md:pb-28 scroll-mt-16 md:scroll-mt-20">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6">
+      <div class="border-t-2 border-accent/70 pt-16 md:pt-20">
+        <p class="reveal font-body text-xs uppercase tracking-[0.22em] text-accent font-semibold mb-3">Our work</p>
+        <h2 class="reveal font-heading font-bold uppercase tracking-wide text-[1.9rem] sm:text-4xl md:text-5xl text-white leading-tight mb-4 max-w-3xl [overflow-wrap:break-word]">Built for Minnesota Winters.</h2>
+        <p class="reveal font-body text-lg text-white/65 mb-12 max-w-2xl leading-relaxed">Every photo below is a King Scapes job, photographed on site. No catalogue shots.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="reveal group bg-white/[0.04] border border-white/10 md:col-span-2 lg:row-span-2 flex flex-col">
+            <div class="relative aspect-[4/3] lg:aspect-auto lg:flex-1 lg:min-h-[420px] overflow-hidden">
+              <picture><source type="image/avif" srcset="assets/work-herringbone-driveway.avif"><source type="image/webp" srcset="assets/work-herringbone-driveway.webp"><img src="assets/work-herringbone-driveway.jpg" alt="Herringbone paver driveway with a two-tone soldier border between stepped block retaining walls" width="1600" height="1600" loading="lazy" decoding="async" class="absolute inset-0 !w-full !h-full object-cover object-[50%_60%] group-hover:scale-105 transition-transform duration-700"></picture>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="font-body text-[11px] uppercase tracking-widest bg-accent/15 text-accent px-2.5 py-1">Paver driveway</span>
+                <span class="font-body text-[11px] uppercase tracking-widest bg-white/10 text-white/70 px-2.5 py-1">Retaining walls</span>
+              </div>
+              <h3 class="font-heading font-semibold uppercase tracking-wide text-2xl text-white mb-2">A Driveway Cut Into the Hill</h3>
+              <p class="font-body text-[15px] text-white/65 leading-relaxed">A herringbone paver drive with a contrasting soldier border, running down between stepped block walls that hold the grade on both sides.</p>
+            </div>
+          </article>
+
+          <article class="reveal group bg-white/[0.04] border border-white/10">
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <picture><source type="image/avif" srcset="assets/work-curved-wall-fall.avif"><img src="assets/work-curved-wall-fall.jpg" alt="Long curved block retaining wall with a capstone top, with autumn leaves at its base" width="1032" height="590" loading="lazy" decoding="async" class="absolute inset-0 !w-full !h-full object-cover group-hover:scale-105 transition-transform duration-700"></picture>
+            </div>
+            <div class="p-6">
+              <span class="inline-block font-body text-[11px] uppercase tracking-widest bg-accent/15 text-accent px-2.5 py-1 mb-3">Retaining wall</span>
+              <h3 class="font-heading font-semibold uppercase tracking-wide text-xl text-white mb-2">One Long, Clean Curve</h3>
+              <p class="font-body text-[15px] text-white/65 leading-relaxed">A sweeping capped wall that holds the grade along the house, with courses that stay true the whole length of the curve.</p>
+            </div>
+          </article>
+
+          <article class="reveal group bg-white/[0.04] border border-white/10">
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <picture><source type="image/avif" srcset="assets/work-tiered-front-wall.avif"><img src="assets/work-tiered-front-wall.jpg" alt="Two-tier capped block retaining wall terracing a front yard down to the sidewalk" width="786" height="1048" loading="lazy" decoding="async" class="absolute inset-0 !w-full !h-full object-cover object-[50%_70%] group-hover:scale-105 transition-transform duration-700"></picture>
+            </div>
+            <div class="p-6">
+              <span class="inline-block font-body text-[11px] uppercase tracking-widest bg-accent/15 text-accent px-2.5 py-1 mb-3">Retaining walls</span>
+              <h3 class="font-heading font-semibold uppercase tracking-wide text-xl text-white mb-2">A Front Slope, Terraced</h3>
+              <p class="font-body text-[15px] text-white/65 leading-relaxed">Two capped tiers step a steep front yard down to the sidewalk, with mulched beds on each level.</p>
+            </div>
+          </article>
+
+          <article class="reveal group bg-white/[0.04] border border-white/10">
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <picture><source type="image/avif" srcset="assets/work-charcoal-driveway.avif"><img src="assets/work-charcoal-driveway.jpg" alt="Charcoal paver driveway with a running-bond pattern leading to a white garage" width="1048" height="590" loading="lazy" decoding="async" class="absolute inset-0 !w-full !h-full object-cover group-hover:scale-105 transition-transform duration-700"></picture>
+            </div>
+            <div class="p-6">
+              <span class="inline-block font-body text-[11px] uppercase tracking-widest bg-accent/15 text-accent px-2.5 py-1 mb-3">Paver driveway</span>
+              <h3 class="font-heading font-semibold uppercase tracking-wide text-xl text-white mb-2">Charcoal, Garage to Street</h3>
+              <p class="font-body text-[15px] text-white/65 leading-relaxed">A full-width charcoal paver drive from the garage to the street apron. Curb appeal that also handles the snow.</p>
+            </div>
+          </article>
+
+          <article class="reveal group bg-white/[0.04] border border-white/10">
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <picture><source type="image/avif" srcset="assets/work-limestone-patio.avif"><img src="assets/work-limestone-patio.jpg" alt="Patio enclosed by a natural limestone seating wall, with patio furniture and planted borders" width="786" height="786" loading="lazy" decoding="async" class="absolute inset-0 !w-full !h-full object-cover object-[50%_55%] group-hover:scale-105 transition-transform duration-700"></picture>
+            </div>
+            <div class="p-6">
+              <span class="inline-block font-body text-[11px] uppercase tracking-widest bg-accent/15 text-accent px-2.5 py-1 mb-3">Natural stone</span>
+              <h3 class="font-heading font-semibold uppercase tracking-wide text-xl text-white mb-2">A Room Walled in Limestone</h3>
+              <p class="font-body text-[15px] text-white/65 leading-relaxed">A natural limestone seating wall wraps the patio, with planting along the top so the wall reads as garden, not masonry.</p>
+            </div>
+          </article>
+
+          <article class="reveal group bg-white/[0.04] border border-white/10">
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <picture><source type="image/avif" srcset="assets/work-raised-bed.avif"><img src="assets/work-raised-bed.jpg" alt="Curved block-edged island planting bed with boulders, ornamental grasses and annual flowers" width="860" height="590" loading="lazy" decoding="async" class="absolute inset-0 !w-full !h-full object-cover group-hover:scale-105 transition-transform duration-700"></picture>
+            </div>
+            <div class="p-6">
+              <span class="inline-block font-body text-[11px] uppercase tracking-widest bg-accent/15 text-accent px-2.5 py-1 mb-3">Plantings</span>
+              <h3 class="font-heading font-semibold uppercase tracking-wide text-xl text-white mb-2">An Island Bed With Weight</h3>
+              <p class="font-body text-[15px] text-white/65 leading-relaxed">A block-edged raised bed anchored with boulders and tall grasses, planted with hand-selected stock.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="reveal mt-12 flex flex-col sm:flex-row sm:items-center gap-4">
+          <a href="#contact" class="inline-block text-center bg-primary text-white px-8 py-4 font-heading font-semibold uppercase tracking-widest text-sm rounded-none hover:bg-white hover:text-secondary transition-colors">Plan Your Project</a>
+          <a href="https://www.instagram.com/kingscapeslandscaping" target="_blank" rel="noopener" class="inline-block text-center font-heading font-semibold uppercase tracking-widest text-sm text-white/80 px-2 py-3 hover:text-accent transition-colors">More on Instagram &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="testimonials" class="bg-brand-bg py-20 md:py-28 scroll-mt-16 md:scroll-mt-20">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6">
+      <div class="reveal h-[3px] w-14 bg-accent mb-6"></div>
+      <p class="reveal font-body text-xs uppercase tracking-[0.22em] text-accent-deep font-semibold mb-3">Reviews</p>
+      <h2 class="reveal font-heading font-bold uppercase tracking-wide text-[1.9rem] sm:text-4xl md:text-5xl text-brand-text leading-tight mb-4 max-w-3xl [overflow-wrap:break-word]">What Homeowners Say About the Crew.</h2>
+      <div class="reveal flex flex-wrap items-center gap-x-4 gap-y-2 mb-12">
+        <span class="text-accent-deep text-2xl tracking-wide" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="font-body text-lg text-brand-text/80"><strong class="font-semibold text-brand-text">4.7 out of 5</strong> from Twin Cities homeowners on HomeAdvisor</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <figure class="reveal bg-white border border-brand-text/10 p-7 md:p-8 flex flex-col">
+          <div class="font-heading text-7xl leading-none text-accent h-10 -mt-1 mb-4" aria-hidden="true">&ldquo;</div>
+          <blockquote class="font-body text-lg md:text-xl text-brand-text leading-relaxed flex-1">Everyone, from Donovan to the crew who showed up over multiple days, were quick to respond to questions and concerns.</blockquote>
+          <figcaption class="flex items-center gap-4 mt-8 pt-6 border-t border-brand-text/10">
+            <span class="w-12 h-12 shrink-0 bg-primary text-white font-heading font-semibold text-lg flex items-center justify-center" aria-hidden="true">PR</span>
+            <span>
+              <span class="block font-heading font-semibold uppercase tracking-wide text-brand-text">Phillip R.</span>
+              <span class="block font-body text-sm text-brand-text/60">Twin Cities homeowner</span>
+            </span>
+          </figcaption>
+        </figure>
+        <figure class="reveal bg-white border border-brand-text/10 p-7 md:p-8 flex flex-col">
+          <div class="font-heading text-7xl leading-none text-accent h-10 -mt-1 mb-4" aria-hidden="true">&ldquo;</div>
+          <blockquote class="font-body text-lg md:text-xl text-brand-text leading-relaxed flex-1">Communication was really good throughout. Timelines were pretty good, too. The final product looks really good!</blockquote>
+          <figcaption class="flex items-center gap-4 mt-8 pt-6 border-t border-brand-text/10">
+            <span class="w-12 h-12 shrink-0 bg-primary text-white font-heading font-semibold text-lg flex items-center justify-center" aria-hidden="true">JD</span>
+            <span>
+              <span class="block font-heading font-semibold uppercase tracking-wide text-brand-text">Jack D.</span>
+              <span class="block font-body text-sm text-brand-text/60">via HomeAdvisor &middot; March 2024</span>
+            </span>
+          </figcaption>
+        </figure>
+        <figure class="reveal bg-white border border-brand-text/10 p-7 md:p-8 flex flex-col">
+          <div class="font-heading text-7xl leading-none text-accent h-10 -mt-1 mb-4" aria-hidden="true">&ldquo;</div>
+          <blockquote class="font-body text-lg md:text-xl text-brand-text leading-relaxed flex-1">Work was completed in a timely manner by a very professional, knowledgeable, and polite crew.</blockquote>
+          <figcaption class="flex items-center gap-4 mt-8 pt-6 border-t border-brand-text/10">
+            <span class="w-12 h-12 shrink-0 bg-primary text-white font-heading font-semibold text-lg flex items-center justify-center" aria-hidden="true">CR</span>
+            <span>
+              <span class="block font-heading font-semibold uppercase tracking-wide text-brand-text">Chuck R.</span>
+              <span class="block font-body text-sm text-brand-text/60">Twin Cities homeowner</span>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="reveal mt-16 pt-10 border-t border-brand-text/10 flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
+        <div class="font-heading uppercase tracking-wider text-sm text-brand-text/70 shrink-0">We build with</div>
+        <div class="flex flex-wrap items-center gap-x-10 gap-y-6">
+          <picture><source type="image/avif" srcset="assets/mark-belgard.avif"><source type="image/webp" srcset="assets/mark-belgard.webp"><img src="assets/mark-belgard.png" alt="Belgard Hardscapes" width="214" height="72" loading="lazy" decoding="async" class="h-8 md:h-9 w-auto grayscale opacity-70"></picture>
+          <picture><source type="image/avif" srcset="assets/mark-versa-lok.avif"><source type="image/webp" srcset="assets/mark-versa-lok.webp"><img src="assets/mark-versa-lok.png" alt="Versa-Lok Retaining Wall Systems" width="192" height="88" loading="lazy" decoding="async" class="h-10 md:h-11 w-auto grayscale opacity-70"></picture>
+          <picture><source type="image/avif" srcset="assets/mark-kichler.avif"><source type="image/webp" srcset="assets/mark-kichler.webp"><img src="assets/mark-kichler.png" alt="Kichler Lighting" width="236" height="56" loading="lazy" decoding="async" class="h-6 md:h-7 w-auto grayscale opacity-70"></picture>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="bg-primary py-20 md:py-28 scroll-mt-16 md:scroll-mt-20">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="text-white">
+        <div class="reveal flex items-center gap-3 mb-5">
+          <svg class="w-8 h-6 text-white" viewBox="0 0 32 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" aria-hidden="true"><path d="M3 20L1 5l8 6 7-9 7 9 8-6-2 15H3z"/><path d="M3 23h26"/></svg>
+          <span class="font-body text-xs uppercase tracking-[0.22em] text-white/85 font-semibold">Free consultation &amp; site analysis</span>
+        </div>
+        <h2 class="reveal font-heading font-bold uppercase tracking-wide text-[2.1rem] sm:text-5xl md:text-6xl leading-[1.05] mb-5 [overflow-wrap:break-word]">Let's Create Your Kingdom.</h2>
+        <p class="reveal font-body text-lg md:text-xl text-white/85 leading-relaxed mb-8 max-w-xl">We'll walk the yard with you, look at the slope, the drainage and the light, and tell you honestly what's possible and what it takes.</p>
+        <ul class="reveal space-y-3 mb-10 font-body text-base text-white/90">
+          <li class="flex items-start gap-3"><svg class="w-5 h-5 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" aria-hidden="true"><path d="M5 12l5 5L19 7"/></svg>No-cost consultation, site analysis and design estimate</li>
+          <li class="flex items-start gap-3"><svg class="w-5 h-5 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" aria-hidden="true"><path d="M5 12l5 5L19 7"/></svg>See your project in a 2D or 3D design before we dig</li>
+          <li class="flex items-start gap-3"><svg class="w-5 h-5 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" aria-hidden="true"><path d="M5 12l5 5L19 7"/></svg>Owner-operated, licensed &amp; insured, ICPI member</li>
+        </ul>
+        <div class="reveal">
+          <div class="font-body text-xs uppercase tracking-[0.22em] text-white/75 font-semibold mb-2">Prefer to talk? Call Donovan</div>
+          <a href="tel:+16512100648" class="inline-block py-1 font-heading font-bold tracking-wide text-4xl sm:text-5xl text-white hover:text-secondary transition-colors">(651) 210-0648</a>
+          <p class="font-body text-sm text-white/70 mt-3">627 Bush Avenue, Saint Paul, MN 55130</p>
+        </div>
+      </div>
+
+      <div class="reveal bg-white p-6 sm:p-8 md:p-10 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.45)]">
+        <form id="consult-form" class="flex flex-col gap-5" novalidate>
+          <div>
+            <h3 class="font-heading font-semibold uppercase tracking-wide text-2xl text-brand-text">Book Your Free Site Visit</h3>
+            <p class="font-body text-[15px] text-brand-text/65 mt-1">Three quick details and we'll call to set a time.</p>
+          </div>
+          <label class="flex flex-col gap-1.5">
+            <span class="font-body text-sm font-semibold text-brand-text">Your name</span>
+            <input type="text" name="name" autocomplete="name" required class="border border-brand-text/25 rounded-none px-4 py-3.5 font-body text-base text-brand-text bg-white focus:border-primary focus:ring-2 focus:ring-primary/25 outline-none">
+          </label>
+          <label class="flex flex-col gap-1.5">
+            <span class="font-body text-sm font-semibold text-brand-text">Phone</span>
+            <input type="tel" name="phone" autocomplete="tel" inputmode="tel" required class="border border-brand-text/25 rounded-none px-4 py-3.5 font-body text-base text-brand-text bg-white focus:border-primary focus:ring-2 focus:ring-primary/25 outline-none">
+          </label>
+          <label class="flex flex-col gap-1.5">
+            <span class="font-body text-sm font-semibold text-brand-text">What are you planning?</span>
+            <select name="service" required class="border border-brand-text/25 rounded-none px-4 py-3.5 font-body text-base text-brand-text bg-white focus:border-primary focus:ring-2 focus:ring-primary/25 outline-none">
+              <option value="">Choose one</option>
+              <option>Patio or outdoor room</option>
+              <option>Retaining wall or steps</option>
+              <option>Fireplace or fire pit</option>
+              <option>Paver driveway</option>
+              <option>Water feature</option>
+              <option>Landscape lighting</option>
+              <option>Plantings</option>
+              <option>Drainage &amp; grading</option>
+              <option>A combination / not sure yet</option>
+            </select>
+          </label>
+          <button type="submit" class="mt-1 bg-secondary text-white px-8 py-4 font-heading font-semibold uppercase tracking-widest text-sm rounded-none hover:bg-primary transition-colors">Get a Free Consultation</button>
+          <p class="font-body text-xs text-brand-text/55 text-center">Design preview: this form doesn't send anything yet.</p>
+        </form>
+        <div id="form-sent" class="hidden flex-col items-start gap-4" role="status" aria-live="polite">
+          <div class="w-12 h-12 bg-primary flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" aria-hidden="true"><path d="M5 12l5 5L19 7"/></svg>
+          </div>
+          <h3 id="sent-name" class="font-heading font-semibold uppercase tracking-wide text-2xl text-brand-text">Thanks.</h3>
+          <p class="font-body text-base text-brand-text/70 leading-relaxed">This is a design preview, so nothing was sent. To reach King Scapes, call <a href="tel:+16512100648" class="font-semibold text-primary underline underline-offset-2">(651) 210-0648</a>.</p>
+          <button type="button" id="form-reset" class="font-body text-sm font-semibold text-brand-text/60 underline underline-offset-2 py-3">Send another request</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-secondary text-white">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 py-14 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div>
+        <div class="font-heading font-semibold uppercase tracking-wide text-2xl text-white">King Scapes</div>
+        <div class="font-body text-xs uppercase tracking-[0.2em] text-accent mt-1 font-semibold">Landscape Construction &middot; Since 2007</div>
+        <p class="font-body text-sm text-white/60 mt-4 max-w-xs leading-relaxed">Owner-operated landscape design-build serving Saint Paul, Minneapolis and the greater Twin Cities metro. Licensed &amp; insured. ICPI member.</p>
+      </div>
+      <div class="font-body text-sm text-white/70 leading-relaxed">
+        <div class="font-heading uppercase tracking-wider text-white text-sm mb-3">Visit &amp; Call</div>
+        <p>627 Bush Avenue<br>Saint Paul, MN 55130</p>
+        <p class="mt-3"><a href="tel:+16512100648" class="inline-block py-2.5 font-heading text-lg tracking-wide text-white hover:text-accent transition-colors">(651) 210-0648</a></p>
+      </div>
+      <div class="font-body text-sm text-white/70">
+        <div class="font-heading uppercase tracking-wider text-white text-sm mb-3">Follow Our Work</div>
+        <ul class="space-y-1">
+          <li><a href="https://www.instagram.com/kingscapeslandscaping" class="inline-block py-3 hover:text-accent transition-colors" rel="noopener" target="_blank">Instagram</a></li>
+          <li><a href="https://www.facebook.com/kingscapeslandscapeconstruction" class="inline-block py-3 hover:text-accent transition-colors" rel="noopener" target="_blank">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 pt-8 border-t border-white/10">
+      <div class="font-heading uppercase tracking-wider text-white/80 text-xs mb-3">Proudly Serving</div>
+      <p class="font-body text-xs text-white/45 leading-relaxed">Afton &middot; Apple Valley &middot; Arden Hills &middot; Birchwood Village &middot; Bloomington &middot; Burnsville &middot; Chanhassen &middot; Chaska &middot; Cottage Grove &middot; Dellwood &middot; Eagan &middot; Eden Prairie &middot; Edina &middot; Excelsior &middot; Farmington &middot; Gem Lake &middot; Golden Valley &middot; Grant &middot; Hastings &middot; Hopkins &middot; Inver Grove Heights &middot; Lake Elmo &middot; Lakeland &middot; Lakeville &middot; Lilydale &middot; Little Canada &middot; Long Lake &middot; Mahtomedi &middot; Maplewood &middot; Marine on St. Croix &middot; Mendota Heights &middot; Minneapolis &middot; Minnetonka &middot; New Brighton &middot; North Oaks &middot; Oakdale &middot; Pine Springs &middot; Plymouth &middot; Prior Lake &middot; Richfield &middot; Rosemount &middot; Roseville &middot; Saint Paul &middot; Shakopee &middot; Shoreview &middot; St. Anthony &middot; St. Louis Park &middot; St. Mary's Point &middot; Stillwater &middot; Vadnais Heights &middot; Wayzata &middot; White Bear Lake &middot; Woodbury</p>
+    </div>
+    <div class="mt-8 font-body text-xs text-white/40">&copy; 2026 King Scapes Custom Landscaping. All rights reserved. | Saint Paul, MN</div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  const toggle = document.querySelector('.nav__toggle');
+  const menu = document.querySelector('.nav__menu');
+  const setMenu = (open) => {
+    menu.classList.toggle('hidden', !open);
+    menu.classList.toggle('flex', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  };
+  toggle.addEventListener('click', () => setMenu(menu.classList.contains('hidden')));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+  const form = document.getElementById('consult-form');
+  if (form) {
+    const sent = document.getElementById('form-sent');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      const first = form.querySelector('[name=name]').value.trim().split(' ')[0];
+      document.getElementById('sent-name').textContent = first ? `Thanks, ${first}.` : 'Thanks.';
+      form.classList.add('hidden');
+      sent.classList.remove('hidden');
+      sent.classList.add('flex');
+    });
+    document.getElementById('form-reset').addEventListener('click', () => {
+      form.reset();
+      sent.classList.add('hidden');
+      sent.classList.remove('flex');
+      form.classList.remove('hidden');
+    });
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  document.querySelectorAll('.cs input[type=range]').forEach(input => {
+    input.addEventListener('input', function () {
+      this.closest('.cs').querySelector('.cs-after').style.clipPath = `inset(0 ${100 - this.value}% 0 0)`;
+    });
+  });
+</script>
+
+</body>
+</html>
